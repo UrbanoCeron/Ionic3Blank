@@ -1,0 +1,14 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ data.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <card
+      *ngFor="let item of students"
+      [student]="item"
+      (click-card)="deleteCard($event)"
+    ></card>
+</ion-content>

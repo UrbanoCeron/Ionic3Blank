@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Crear cuenta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form class="wrapper-form" [formGroup]="createAccountForm" >
+    <ion-item>
+      <ion-label floating>Nombre <span class="required">*</span></ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label floating>Apellido Paterno<span class="required">*</span></ion-label>
+      <ion-input formControlName="app"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label floating>Apellido Materno</ion-label>
+      <ion-input formControlName="apm"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label floating>Correo electronico<span class="required">*</span></ion-label>
+      <ion-input formControlName="email"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label floating>Matricula<span class="required">*</span></ion-label>
+      <ion-input formControlName="matricula"></ion-input>
+    </ion-item> 
+  </form>
+  <div class="wrapper-controls">
+    <button 
+      ion-button 
+      color="primary"
+      [disabled]="!createAccountForm.valid"
+      (click)="createAccount()">
+      Crear cuenta
+    </button>
+  </div>
+
+</ion-content>

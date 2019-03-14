@@ -1,14 +1,37 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Beca Java 2019
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="wrapper-login">
+    <h1>Login</h1>
+    <p>Inicio de sesion para el curso de Java 2019</p>
+    <br>
+    <form class="wrapper" [formGroup]="loginForm" >
+      <ion-item>
+        <ion-label fixed>Usuario</ion-label>
+        <ion-input formControlName="user"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input type="password" formControlName="pwd"></ion-input>
+      </ion-item>
+      <br>
+      <button 
+        ion-button 
+        round 
+        [color]=" loginForm.valid ? 'primary' : 'danger'" 
+        (click)="login()">Login</button>
+    </form>  
+    <br>
+    <div class="wrapper-controls">
+      <button ion-button clear (click)="goCreateAccount()">
+        Crear cuenta
+      </button>
+    </div>
+  </div>
 </ion-content>

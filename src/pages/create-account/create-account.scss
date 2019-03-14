@@ -1,0 +1,16 @@
+page-create-account {
+    .wrapper-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .required {
+        color: red;
+    }
+
+    .wrapper-controls {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+}
