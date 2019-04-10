@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label> Usuario </ion-label>
+    <ion-input [(ngModel)]="user" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label> Contraseña </ion-label>
+    <ion-input [(ngModel)]="pwd"></ion-input>
+  </ion-item>
+  
+  <div style="display: flex; justify-content: space-evenly;" >
+    <button 
+    ion-button 
+    color="axity" 
+    (click)="login()"> Login </button>
+    <button  ion-button color="danger" (click)="goCreateAccount()" > Crear cuenta</button>
+  </div>
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-navbar>
+    <ion-title>Footer</ion-title>
+  </ion-navbar>
+</ion-footer>
